@@ -2,12 +2,19 @@
 
 void Main()
 {
-	int[] input = new int[]{8,7,9,6,5,4,1,2,5,6,3,2,5,8,9,6};
+	//int[] input = new int[]{8,7,9,6,5,4,1,2,5,6,3,2,5,8,9,6};
+	int[] input = new int[]{8,7,9,6,5};
 	input.PrintArray();
 	Console.WriteLine();
-	
-	QuickSort(input, 0, input.Length - 1);
-	input.Dump();
+	try
+	{	        
+		QuickSort(input, 0, input.Length - 1);	
+	}
+	catch (Exception ex)
+	{
+		Console.WriteLine(ex.Message);
+	}
+	input.PrintArray();
 	
 }
 
@@ -35,8 +42,6 @@ void QuickSort(int[] input, int left, int right)
 			j--;
 		}
 	}
-	Console.WriteLine("Iteration");
-	input.PrintArray();
 	if (left < j)
 	{
 		QuickSort(input, left, j);
