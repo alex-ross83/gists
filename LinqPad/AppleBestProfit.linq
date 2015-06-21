@@ -3,7 +3,8 @@
 void Main()
 {
 	//var input = new int[]{100,500,350,450,600,500,700,200,900,600};
-	var input = new int[]{600,500,400,300,200,100,0};
+	//var input = new int[]{600,500,400,300,200,100,0};
+	var input = new int[]{10,22,5,75,65,80};
 	var bestProfit = CalculateBestProfit(input);
 	bestProfit.Dump();
 }
